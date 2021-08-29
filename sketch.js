@@ -70,7 +70,7 @@ function draw() {
   background(56,44,44); 
  
   imageMode(CENTER);
-  image(rock_img,100,200,50,50)
+  image(rock_img,ball.position.x,ball.position.y,50,50)
   // write image() to display the polygon image 
   
 
@@ -130,7 +130,7 @@ function draw() {
   slingShot.display();
 }
 function mouseDragged(){
-  Matter.Body.setPosition(this.rock_img,{x:mouseX,y:mouseY});
+  Matter.Body.setPosition(this.ball,{x:mouseX,y:mouseY});
 }
 function mouseReleased(){
   slingShot.fly();
